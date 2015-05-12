@@ -1,3 +1,5 @@
+# !!!!! UNDER CONSTRUCTION !!!!!
+
 # SC Instafeed
 A Instagram feed plugin for WordPress, based on InstafeedJS
 
