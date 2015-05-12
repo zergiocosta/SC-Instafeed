@@ -46,6 +46,15 @@ function sc_instafeed_settings_init(  ) {
             'sc_instafeed_sc_instafeed_section' 
         );
 
+        // limit
+        add_settings_field( 
+            'limit', 
+            __( 'Max Number of Images - (Only Numbers from 1 to 60)', 'scinstafeed' ), 
+            'sc_instafeed_limit_render', 
+            'sc_instafeed', 
+            'sc_instafeed_sc_instafeed_section' 
+        );
+
         // sortBy
         add_settings_field( 
             'sortBy', 
@@ -108,6 +117,14 @@ function sc_instafeed_tag_render(  ) {
 
 }
 
+// limit
+function sc_instafeed_limit_render(  ) { 
+
+    $options = get_option( 'sc_instafeed_settings' ); ?>
+    <input type="text" name="sc_instafeed_settings[limit]" value="<?php echo $options['limit']; ?>"> <?php
+
+}
+
 // sortBy
 function sc_instafeed_sortby_render(  ) { 
 
@@ -151,6 +168,7 @@ function sc_instafeed_call() {
             <?php if ($options["clientid"])                  { echo "clientId: '" . $options['clientid'] . "',"; } ?>
             <?php if ($options["resolution"])                { echo "resolution: '" . $options['resolution'] . "',"; } ?>
             <?php if ($options["get"])                       { echo "get: '" . $options['get'] . "',"; } ?>
+            <?php if ($options["limit"])                     { echo "limit: '" . $options['limit'] . "',"; } ?>
             <?php if ($options["tag"])                       { echo "tagName: '" . $options['tag'] . "',"; } ?>
             <?php if ($options["sortBy"])                    { echo "sortBy: '" . $options['sortBy'] . "',"; } ?>
 
