@@ -46,6 +46,15 @@ function sc_instafeed_settings_init(  ) {
             'sc_instafeed_sc_instafeed_section' 
         );
 
+        // sortBy
+        add_settings_field( 
+            'sortBy', 
+            __( 'Sort images by', 'scinstafeed' ), 
+            'sc_instafeed_sortby_render', 
+            'sc_instafeed', 
+            'sc_instafeed_sc_instafeed_section' 
+        );
+
         // custom CSS
         add_settings_field( 
             'custom_css', 
@@ -99,6 +108,23 @@ function sc_instafeed_tag_render(  ) {
 
 }
 
+// sortBy
+function sc_instafeed_sortby_render(  ) { 
+
+    $options = get_option( 'sc_instafeed_settings' ); ?>
+    <select name='sc_instafeed_settings[sortBy]'>
+        <option value='none' <?php selected( $options['sortBy'], 'none' ); ?>>None</option>
+        <option value='most-recent' <?php selected( $options['sortBy'], 'most-recent' ); ?>>Most Recent</option>
+        <option value='least-recent' <?php selected( $options['sortBy'], 'least-recent' ); ?>>Least Recent</option>
+        <option value='most-liked' <?php selected( $options['sortBy'], 'most-liked' ); ?>>Most Liked</option>
+        <option value='least-liked' <?php selected( $options['sortBy'], 'least-liked' ); ?>>Least Liked</option>
+        <option value='most-commented' <?php selected( $options['sortBy'], 'most-commented' ); ?>>Most Commented</option>
+        <option value='least-commented' <?php selected( $options['sortBy'], 'least-commented' ); ?>>Least Commented</option>
+        <option value='random' <?php selected( $options['sortBy'], 'random' ); ?>>Random</option>
+    </select> <?php
+
+}
+
 
 // custom CSS
 function sc_instafeed_custom_css_render(  ) { 
@@ -126,6 +152,7 @@ function sc_instafeed_call() {
             <?php if ($options["resolution"])                { echo "resolution: '" . $options['resolution'] . "',"; } ?>
             <?php if ($options["get"])                       { echo "get: '" . $options['get'] . "',"; } ?>
             <?php if ($options["tag"])                       { echo "tagName: '" . $options['tag'] . "',"; } ?>
+            <?php if ($options["sortBy"])                    { echo "sortBy: '" . $options['sortBy'] . "',"; } ?>
 
             template:   '<div class="sc_instafeed_item">\n' +
                             '<a href="{{link}}" target="_blank">\n' +
