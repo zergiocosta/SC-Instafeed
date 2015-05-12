@@ -1,4 +1,4 @@
-# SC BXSlider
+# SC Instafeed
 A Instagram feed plugin for WordPress, based on InstafeedJS
 
 ## License
