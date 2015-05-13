@@ -13,6 +13,7 @@ A simple Instagram feed plugin based on InstaFeedJS
 == Description ==
 
 A simple Instagram feed plugin based on InstaFeedJS
+For now, the plugin outputs ZERO CSS. You can add your own CSS into the admin panel, in SC InstaFeed options page.
 
 Just:
 1. Upload the folder `sc-instafeed` to the `/wp-content/plugins/` directory
