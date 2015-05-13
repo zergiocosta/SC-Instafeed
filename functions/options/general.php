@@ -89,9 +89,9 @@ function sc_instafeed_resolution_render(  ) {
 
     $options = get_option( 'sc_instafeed_settings' ); ?>
     <select name='sc_instafeed_settings[resolution]'>
-        <option value='thumbnail' <?php selected( $options['resolution'], 'thumbnail' ); ?>>Thumbnail (150x150)</option>
-        <option value='low_resolution' <?php selected( $options['resolution'], 'low_resolution' ); ?>>Low Resolution (306x306)</option>
-        <option value='standard_resolution' <?php selected( $options['resolution'], 'standard_resolution' ); ?>>Standard (612x612)</option>
+        <option value='thumbnail' <?php selected( $options['resolution'], 'thumbnail' ); ?>><?php echo __('Thumbnail (150x150)', 'scinstafeed'); ?></option>
+        <option value='low_resolution' <?php selected( $options['resolution'], 'low_resolution' ); ?>><?php echo __('Low Resolution (306x306)', 'scinstafeed'); ?></option>
+        <option value='standard_resolution' <?php selected( $options['resolution'], 'standard_resolution' ); ?>><?php echo __('Standard (612x612)', 'scinstafeed'); ?></option>
     </select> <?php
 
 }
@@ -101,10 +101,10 @@ function sc_instafeed_get_render(  ) {
 
     $options = get_option( 'sc_instafeed_settings' ); ?>
     <select name='sc_instafeed_settings[get]'>
-        <option value='popular' <?php selected( $options['get'], 'popular' ); ?>>Popular</option>
-        <option value='tagged' <?php selected( $options['get'], 'tagged' ); ?>>Tagged</option>
-        <?/*<option value='location' <?php selected( $options['get'], 'location' ); ?>>Location</option>
-        <option value='user' <?php selected( $options['get'], 'user' ); ?>>User</option>*/?>
+        <option value='popular' <?php selected( $options['get'], 'popular' ); ?>><?php echo __('Popular', 'scinstafeed'); ?></option>
+        <option value='tagged' <?php selected( $options['get'], 'tagged' ); ?>><?php echo __('Tagged', 'scinstafeed'); ?></option>
+        <?/*<option value='location' <?php selected( $options['get'], 'location' ); ?>><?php echo __('Location', 'scinstafeed'); ?></option>
+        <option value='user' <?php selected( $options['get'], 'user' ); ?>><?php echo __('User', 'scinstafeed'); ?></option>*/?>
     </select> <?php
 
 }
@@ -130,14 +130,14 @@ function sc_instafeed_sortby_render(  ) {
 
     $options = get_option( 'sc_instafeed_settings' ); ?>
     <select name='sc_instafeed_settings[sortBy]'>
-        <option value='none' <?php selected( $options['sortBy'], 'none' ); ?>>None</option>
-        <option value='most-recent' <?php selected( $options['sortBy'], 'most-recent' ); ?>>Most Recent</option>
-        <option value='least-recent' <?php selected( $options['sortBy'], 'least-recent' ); ?>>Least Recent</option>
-        <option value='most-liked' <?php selected( $options['sortBy'], 'most-liked' ); ?>>Most Liked</option>
-        <option value='least-liked' <?php selected( $options['sortBy'], 'least-liked' ); ?>>Least Liked</option>
-        <option value='most-commented' <?php selected( $options['sortBy'], 'most-commented' ); ?>>Most Commented</option>
-        <option value='least-commented' <?php selected( $options['sortBy'], 'least-commented' ); ?>>Least Commented</option>
-        <option value='random' <?php selected( $options['sortBy'], 'random' ); ?>>Random</option>
+        <option value='none' <?php selected( $options['sortBy'], 'none' ); ?>><?php echo __('None', 'scinstafeed'); ?></option>
+        <option value='most-recent' <?php selected( $options['sortBy'], 'most-recent' ); ?>><?php echo __('Most Recent', 'scinstafeed'); ?></option>
+        <option value='least-recent' <?php selected( $options['sortBy'], 'least-recent' ); ?>><?php echo __('Least Recent', 'scinstafeed'); ?></option>
+        <option value='most-liked' <?php selected( $options['sortBy'], 'most-liked' ); ?>><?php echo __('Most Liked', 'scinstafeed'); ?></option>
+        <option value='least-liked' <?php selected( $options['sortBy'], 'least-liked' ); ?>><?php echo __('Least Liked', 'scinstafeed'); ?></option>
+        <option value='most-commented' <?php selected( $options['sortBy'], 'most-commented' ); ?>><?php echo __('Most Commented', 'scinstafeed'); ?></option>
+        <option value='least-commented' <?php selected( $options['sortBy'], 'least-commented' ); ?>><?php echo __('Least Commented', 'scinstafeed'); ?></option>
+        <option value='random' <?php selected( $options['sortBy'], 'random' ); ?>><?php echo __('Random', 'scinstafeed'); ?></option>
     </select> <?php
 
 }
