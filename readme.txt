@@ -15,24 +15,15 @@ A simple Instagram feed plugin based on InstaFeedJS
 A simple Instagram feed plugin based on InstaFeedJS
 For now, the plugin outputs ZERO CSS. You can add your own CSS into the admin panel, in SC InstaFeed options page.
 
-Just:
-1. Upload the folder `sc-instafeed` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure your feed into the administrator panel
-4. Place the shortcode '[sc_instafeed]' wherever you want, in your pages/posts OR place the following code into your php file:
- `<?php echo do_shortcode('[sc_instafeed]'); ?>` 
-5. Edit your custom css, into the administrator panel, if you want
-6. Enjoy!
-
 == Installation ==
 
 1. Upload the folder `sc-instafeed` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Configure your feed into the administrator panel
-4. Place the shortcode '[sc_instafeed]' wherever you want, in your pages/posts OR place the following code into your php file:
+1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Configure your feed into the administrator panel
+1. Place the shortcode '[sc_instafeed]' wherever you want, in your pages/posts OR place the following code into your php file:
  `<?php echo do_shortcode('[sc_instafeed]'); ?>` 
-5. Edit your custom css, into the administrator panel, if you want
-6. Enjoy!
+1. Edit your custom css, into the administrator panel, if you want
+1. Enjoy!
 
 == Frequently Asked Questions ==
 
